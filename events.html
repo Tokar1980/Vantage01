@@ -9,6 +9,78 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+  /* Collapsible event listings */
+  .event-details {
+    margin: 0;
+  }
+
+  .event-details summary {
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    line-height: 1.4;
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+
+  .event-details summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .event-details summary::before {
+    content: "+";
+    width: 1.6rem;
+    height: 1.6rem;
+    flex: 0 0 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .event-details[open] summary::before {
+    content: "–";
+  }
+
+  .event-details summary:hover,
+  .event-details summary:focus-visible {
+    text-decoration: underline;
+  }
+
+  .event-details__content {
+    padding: 0.9rem 0 0 2.15rem;
+  }
+
+  .event-details__content > :first-child {
+    margin-top: 0;
+  }
+
+  .event-details__content > :last-child {
+    margin-bottom: 0;
+  }
+
+  .event-date-compact {
+    white-space: nowrap;
+  }
+
+  @media (max-width: 760px) {
+    .event-date-compact {
+      white-space: normal;
+    }
+
+    .event-details__content {
+      padding-left: 0;
+    }
+  }
+</style>
+
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -66,206 +138,94 @@
     </thead>
     <tbody>
       <tr>
-        <td>10 August 2026 -<br>21 August 2026</td>
+        <td class="event-date-compact">10 August 2026 -<br>21 August 2026</td>
         <td>
-  <strong>VANTAGE Training Course Schedule in 2026</strong><br>
-  <span class="small-note">Interdisciplinary sessions designed for graduate students, faculty members, and members of the broader public interested in the topic.</span>
+          <details class="event-details">
+            <summary>VANTAGE Training Course Schedule in 2026</summary>
+            <div class="event-details__content small-note">
+              <p>Interdisciplinary sessions designed for graduate students, faculty members, and members of the broader public interested in the topic.</p>
 
-  <table style="width:100%; margin-top:10px; border-collapse:collapse;">
-    <tr>
-      <th>Date</th>
-      <th>Time (EDT)</th>
-      <th>Topic</th>
-      <th>Trainer</th>
-    </tr>
-
-    <tr>
-      <td>Mon, 10 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>The Role of Information Operations in Shaping Public Perception and Security Policies in the EU</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-    <tr>
-      <td>Mon, 10 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Hybrid Warfare and the EU’s Response to External Threats</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-
-    <tr>
-      <td>Tue, 11 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Far-Right Movements and Their Impact on EU Cohesion and Support for Ukraine</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-    <tr>
-      <td>Tue, 11 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Cyber Defense and National Security: EU Perspectives in Light of the Ukraine-Russia Conflict</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-
-    <tr>
-      <td>Wed, 12 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Nationalism and Ethnic Identity in Eastern European Politics</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-    <tr>
-      <td>Wed, 12 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>The Historiography of Ukrainian Identity and Its Relevance to EU Integration</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-
-    <tr>
-      <td>Thu, 13 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>The Language and Cultural Sensitivity in Socioeconomic Engagement within the EU. Part 1. </td>
-      <td>Dr Natalia Teslenko</td>
-    </tr>
-    <tr>
-      <td>Thu, 13 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>The Language and Cultural Sensitivity in Socioeconomic Engagement within the EU. Part 2.</td>
-      <td>Dr Natalia Teslenko</td>
-    </tr>
-
-    <tr>
-      <td>Fri, 14 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Economic Security Foundations in the EU Context</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-    <tr>
-      <td>Fri, 14 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>The Role of Institutional Investors in EU Financial Security</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-
-    <tr>
-      <td>Mon, 17 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Economic Resilience and Demographic Challenges in the EU</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-    <tr>
-      <td>Mon, 17 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Gender Equality as a Pillar of Economic Growth in the EU</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-
-    <tr>
-      <td>Tue, 18 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Empowering Women in EU High-Tech and Business Sectors</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-    <tr>
-      <td>Tue, 18 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Gender Security and Economic Integration in the EU and Ukraine</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-
-    <tr>
-      <td>Wed, 19 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Empowering Young Women through EU Educational and Community Initiatives. Part 1.</td>
-      <td>Intizorhon Fataeva</td>
-    </tr>
-    <tr>
-      <td>Wed, 19 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Empowering Young Women through EU Educational and Community Initiatives. Part 2.</td>
-      <td>Intizorhon Fataeva</td>
-    </tr>
-
-    <tr>
-      <td>Thu, 20 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>The Role of AI in Strengthening EU Economic and Social Systems</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-    <tr>
-      <td>Thu, 20 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>Collaborative Cybersecurity Efforts in the EU</td>
-      <td>Prof. Volodymyr Tokar</td>
-    </tr>
-
-    <tr>
-      <td>Fri, 21 Aug 2026</td>
-      <td>09:00–10:30</td>
-      <td>Ukraine’s Journey toward EU Membership: Political and Economic Implications</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-    <tr>
-      <td>Fri, 21 Aug 2026</td>
-      <td>10:40–12:10</td>
-      <td>EU-NATO Collaboration: Past, Present, and Future</td>
-      <td>Dr Mark Thomas</td>
-    </tr>
-
-  </table>
-</td>
-     
-        <td><a class="btn" href="https://forms.gle/H6Cnt5Vc8naiUprv8" target="_blank">Registration link</a></td>
+              <table style="width:100%; margin-top:10px; border-collapse:collapse;">
+                <tr>
+                  <th>Date</th>
+                  <th>Time (EDT)</th>
+                  <th>Topic</th>
+                  <th>Trainer</th>
+                </tr>
+                <tr><td>Mon, 10 Aug 2026</td><td>09:00–10:30</td><td>The Role of Information Operations in Shaping Public Perception and Security Policies in the EU</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Mon, 10 Aug 2026</td><td>10:40–12:10</td><td>Hybrid Warfare and the EU’s Response to External Threats</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Tue, 11 Aug 2026</td><td>09:00–10:30</td><td>Far-Right Movements and Their Impact on EU Cohesion and Support for Ukraine</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Tue, 11 Aug 2026</td><td>10:40–12:10</td><td>Cyber Defense and National Security: EU Perspectives in Light of the Ukraine-Russia Conflict</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Wed, 12 Aug 2026</td><td>09:00–10:30</td><td>Nationalism and Ethnic Identity in Eastern European Politics</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Wed, 12 Aug 2026</td><td>10:40–12:10</td><td>The Historiography of Ukrainian Identity and Its Relevance to EU Integration</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Thu, 13 Aug 2026</td><td>09:00–10:30</td><td>The Language and Cultural Sensitivity in Socioeconomic Engagement within the EU. Part 1.</td><td>Dr Natalia Teslenko</td></tr>
+                <tr><td>Thu, 13 Aug 2026</td><td>10:40–12:10</td><td>The Language and Cultural Sensitivity in Socioeconomic Engagement within the EU. Part 2.</td><td>Dr Natalia Teslenko</td></tr>
+                <tr><td>Fri, 14 Aug 2026</td><td>09:00–10:30</td><td>Economic Security Foundations in the EU Context</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Fri, 14 Aug 2026</td><td>10:40–12:10</td><td>The Role of Institutional Investors in EU Financial Security</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Mon, 17 Aug 2026</td><td>09:00–10:30</td><td>Economic Resilience and Demographic Challenges in the EU</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Mon, 17 Aug 2026</td><td>10:40–12:10</td><td>Gender Equality as a Pillar of Economic Growth in the EU</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Tue, 18 Aug 2026</td><td>09:00–10:30</td><td>Empowering Women in EU High-Tech and Business Sectors</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Tue, 18 Aug 2026</td><td>10:40–12:10</td><td>Gender Security and Economic Integration in the EU and Ukraine</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Wed, 19 Aug 2026</td><td>09:00–10:30</td><td>Empowering Young Women through EU Educational and Community Initiatives. Part 1.</td><td>Intizorhon Fataeva</td></tr>
+                <tr><td>Wed, 19 Aug 2026</td><td>10:40–12:10</td><td>Empowering Young Women through EU Educational and Community Initiatives. Part 2.</td><td>Intizorhon Fataeva</td></tr>
+                <tr><td>Thu, 20 Aug 2026</td><td>09:00–10:30</td><td>The Role of AI in Strengthening EU Economic and Social Systems</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Thu, 20 Aug 2026</td><td>10:40–12:10</td><td>Collaborative Cybersecurity Efforts in the EU</td><td>Prof. Volodymyr Tokar</td></tr>
+                <tr><td>Fri, 21 Aug 2026</td><td>09:00–10:30</td><td>Ukraine’s Journey toward EU Membership: Political and Economic Implications</td><td>Dr Mark Thomas</td></tr>
+                <tr><td>Fri, 21 Aug 2026</td><td>10:40–12:10</td><td>EU-NATO Collaboration: Past, Present, and Future</td><td>Dr Mark Thomas</td></tr>
+              </table>
+            </div>
+          </details>
+        </td>
+        <td><a class="btn" href="https://forms.gle/H6Cnt5Vc8naiUprv8" target="_blank" rel="noopener noreferrer">Registration link</a></td>
       </tr>
+
       <tr>
-        <td>12 September 2026, <br>19 September 2026</td>
+        <td class="event-date-compact">12 September 2026,<br>19 September 2026</td>
         <td>
-  <strong>Workshop-2026 “EU ECONOMIC SECURITY AND GENDER EQUALITY IN A CHANGING WORLD”</strong>
-  <br>
-  <span class="small-note">
-    <p>
-      A <strong>two-day online workshop</strong> combining expert insights, hands-on data analysis, and participant-led research on economic security and gender equality across EU Member States.
-    </p>
+          <details class="event-details">
+            <summary>Workshop-2026 “EU ECONOMIC SECURITY AND GENDER EQUALITY IN A CHANGING WORLD”</summary>
+            <div class="event-details__content small-note">
+              <p>A <strong>two-day online workshop</strong> combining expert insights, hands-on data analysis, and participant-led research on economic security and gender equality across EU Member States.</p>
 
-    <p>
-      📅 <strong>September 12 &amp; 19, 2026</strong><br>
-      ⏰ <strong>9:00 a.m.–12:10 p.m. EDT</strong><br>
-      💻 <strong>Online</strong>
-    </p>
+              <p>
+                📅 <strong>September 12 &amp; 19, 2026</strong><br>
+                ⏰ <strong>9:00 a.m.–12:10 p.m. EDT</strong><br>
+                💻 <strong>Online</strong>
+              </p>
 
-    <p>
-      <strong>Day 1 — Expert Insights &amp; Hands-On Analysis</strong>
-    </p>
-    <ul>
-      <li><strong>Prof. Volodymyr Tokar</strong> — <em>The European Union in 30 Minutes: A Crash Course for American Graduate Students</em></li>
-      <li><strong>Dr. Mark Thomas</strong> — <em>How the European Union Works: Institutions, Governance, and the Democratic Deficit</em></li>
-      <li><strong>Intizorhon Fataeva</strong> — <em>Implementing EU-Style Gender Initiatives in Uzbekistan: Through the Eyes of a Third-World Woman</em></li>
-      <li><strong>Prof. Volodymyr Tokar</strong> — <em>Measuring EU Member States: Economic Security and Gender Equality in Practice</em></li>
-    </ul>
+              <p><strong>Day 1 — Expert Insights &amp; Hands-On Analysis</strong></p>
+              <ul>
+                <li><strong>Prof. Volodymyr Tokar</strong> — <em>The European Union in 30 Minutes: A Crash Course for American Graduate Students</em></li>
+                <li><strong>Dr. Mark Thomas</strong> — <em>How the European Union Works: Institutions, Governance, and the Democratic Deficit</em></li>
+                <li><strong>Intizorhon Fataeva</strong> — <em>Implementing EU-Style Gender Initiatives in Uzbekistan: Through the Eyes of a Third-World Woman</em></li>
+                <li><strong>Prof. Volodymyr Tokar</strong> — <em>Measuring EU Member States: Economic Security and Gender Equality in Practice</em></li>
+              </ul>
 
-    <p>
-      📊 Participants will be assigned an <strong>EU Member State</strong> and learn to analyze five indicators using relevant data, benchmarks, and <strong>10-year averages</strong>. They will identify key trends, strengths, and vulnerabilities and develop an overall assessment.
-    </p>
+              <p>📊 Participants will be assigned an <strong>EU Member State</strong> and learn to analyze five indicators using relevant data, benchmarks, and <strong>10-year averages</strong>. They will identify key trends, strengths, and vulnerabilities and develop an overall assessment.</p>
 
-    <p>
-      💡 <strong>No advanced Excel skills required.</strong> Microsoft Excel or equivalent spreadsheet software is recommended. The instructional session will be <strong>recorded and made available to participants</strong> for completing their analysis.
-    </p>
+              <p>💡 <strong>No advanced Excel skills required.</strong> Microsoft Excel or equivalent spreadsheet software is recommended. The instructional session will be <strong>recorded and made available to participants</strong> for completing their analysis.</p>
 
-    <p>
-      <strong>Day 2 — EU Member States in Focus: Participant Research Seminar</strong>
-    </p>
+              <p><strong>Day 2 — EU Member States in Focus: Participant Research Seminar</strong></p>
 
-    <p>
-      🎓 Participants will present their EU Member-State analysis in a seminar-style format, with approximately <strong>five minutes per presentation</strong>, followed by discussion.
-    </p>
+              <p>🎓 Participants will present their EU Member-State analysis in a seminar-style format, with approximately <strong>five minutes per presentation</strong>, followed by discussion.</p>
 
-    <p>
-      <strong>Expert insight. Real data. Independent analysis. Participant-led discussion.</strong>
-    </p>
-  </span>
-</td>
-        <td><a class="btn" href="https://forms.gle/SKXvuRUFAwDNxpt87" target="_blank">Registration link</a></td>
+              <p><strong>Expert insight. Real data. Independent analysis. Participant-led discussion.</strong></p>
+            </div>
+          </details>
+        </td>
+        <td><a class="btn" href="https://forms.gle/SKXvuRUFAwDNxpt87" target="_blank" rel="noopener noreferrer">Registration link</a></td>
       </tr>
+
       <tr>
-        <td>TBA</td>
-        <td><strong>Public lecture (placeholder)</strong><br><span class="small-note">Open lecture with joining details to be announced.</span></td>
+        <td class="event-date-compact">TBA</td>
+        <td>
+          <details class="event-details">
+            <summary>Public lecture (placeholder)</summary>
+            <div class="event-details__content small-note">
+              <p>Open lecture with joining details to be announced.</p>
+            </div>
+          </details>
+        </td>
         <td><a class="btn" href="#" onclick="return false;">Join link</a></td>
       </tr>
     </tbody>
